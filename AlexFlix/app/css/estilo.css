@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body
+{
+    background-image: linear-gradient(to left, #053a89, #0039a4, #0034bc, #2928d2, #4f00e5);
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Anton', sans-serif;
+}
+h1{
+    color: white;
+    margin-bottom: 25px;
+}
+.carousel-item{
+    height: 35rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.carousel-item img{
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+}
+
+.container{    
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px;
+    border: 5px solid navy;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.row{
+    /* margin interna da linha */
+    padding: 5px;
+}
+
+.row::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.col-1{ width: 10%; float: left;}
+.col-2{ width: 20%; float: left;}
+.col-3{ width: 30%; float: left;}
+.col-4{ width: 40%; float: left;}
+.col-5{ width: 50%; float: left;}
+.col-6{ width: 60%; float: left;}
+.col-7{ width: 70%; float: left;}
+.col-8{ width: 80%; float: left;}
+.col-9{ width: 90%; float: left;}
+.col-10{ width: 100%; float: left;}
+
+.row-flex{ 
+    display: flex; 
+    gap: 5px; 
+    margin: 15px 0; /* atualizado */
+}
+
+.col{
+    width: 100%;   
+     
+}
+
+/* centraliza objetos */
+.centralizar-v{
+    display: flex; 
+    align-items: center;
+}
+
+.centralizar-h{
+    display: flex;
+    justify-content: center;
+}
+
+/* espaço entre objetos */
+.espaco-v{height: 5px;}
+.espaco-h{width: 5px;}
+
+
+/* TABELA */
+table{
+    border: 1px solid #000;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr{
+    border: 1px solid #000;
+}
+
+th, td{
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+th{
+    background-color: #888;
+}
+
+tr:hover td{
+    background-color: #ddd;
+}
+
+/* INPUT */
+input[type=text], [type=tel], 
+[type=email], [type=password], select{
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #888;
+    height: 45px;  /* atualizado */
+    font-size: 18px;  /* atualizado */
+    margin-top: 5px;  /* atualizado */
+}
+
+input[type=reset]{
+    background-color: #bbb;
+    padding: 20px 40px;
+    border: 1px solid #bbb; 
+    border-radius: 8px;   /* atualizado */ 
+    cursor: pointer;   /* atualizado */
+}
+
+input[type=submit]{
+    background-color: rgb(4, 128, 0);
+    color: white;
+    padding: 20px 50px;
+    border: 1px solid green;
+    border-radius: 8px;    
+    cursor: pointer;  
+}
+
+label{
+    cursor: pointer;    
+    font-weight: bold; 
+    color: #777; 
+}
+
+
+/* MENU */
+.menu ul{    
+    height: 51px;   
+    display: flex;
+    justify-content: end; /* alinha a direta da tela */
+}
+
+.menu ul li{    
+    list-style-type: none;
+    padding: 15px 25px;
+    font-weight: 500; /* negrito no menu */
+}
+
+.menu ul li:hover{
+    color: #fff;
+}
+
+/* FINAL DO MENU  */
+.btnExcluir 
+{
+    background-color: red;
+}
+
+
+
+@media screen and (max-width:800px){
+
+    [class^="col-"]{width: 100%; float: left;}
+    
+    .row-flex{
+        flex-direction: column;
+    }
+
+}
